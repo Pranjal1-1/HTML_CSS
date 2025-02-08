@@ -16,8 +16,6 @@ body{
     grid-template-columns: repeat(3,2fr);
     column-gap: 20px;
      row-gap: 10px;
-     background-image: url(Template.jpg);
-     background-size: cover;
      padding: 20px;
      width: 1293px;
 }
