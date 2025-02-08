@@ -3,85 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas cafe</title>
-    <style>
-        body {
-            font-family: 'Arial, sans-serif';
-            margin: 0;
-            padding: 0;
-            background-color: #c2c2c2;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            color: #fff;
-            padding: 16px 32px;
-        }
-        header .logo {
-            font-size: 24px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 16px;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .hero {
-            background-image: url('background.jpg');
-            background-size: cover;
-            color: #f2f3f1;
-            text-align: center;
-            padding: 64px 32px;
-            height: 315px;
-        }
-        .hero h1 {
-            margin: 0;
-            font-size: 48px;
-        }
-        .content {
-            text-align: center;
-            padding: 32px;
-        }
-        .about, .contact, .gallery {
-            background-color: #6d6c6c;
-            padding: 32px;
-            max-width: 800px;
-            margin: 32px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: #fff;
-            padding: 16px 0;
-        }
-        </style>
+    <title>Welcome to Menu</title>
+    <link rel="stylesheet" href="menu.css">
+<style>
+     header{font-family: 'Arial, sans-serif';}
+nav {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 24px;}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+nav ul li.logo {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 16px 0;
+}
+ </style>
 </head>
 <body>
     <header>
-        <div class="logo">Canvas Cafe</div>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="logo">Canva Cafe</li>
+                <li class="nav-right"><a href="home.html">Home</a></li>
+                <li class="nav-right"><a href="menu.html">Menu</a></li>
+                <li class="nav-right"><a href="gallery.html">Gallery</a></li>
+                <li class="nav-right"><a href="about.html">About</a></li>
+                <li class="nav-right"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h1>Welcome to Canvas Cafe</h1>
-        <p>Where art and coffee blend beautifully.</p>
+    <h2 class="menu" id="menu">Menu</h2>
+    <section class="sec">
+        <div>
+            <img src="expresso.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Expresso</h2>
+            <button>Rs:299</button>
+        </div>
+        <div>
+            <img src="Coffee.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Coffee</h2>
+            <button>Rs:249</button>
+        </div>
+        <div>
+            <img src="Burger.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Burger</h2>
+            <button>Rs:99</button>
+        </div>
+        <div>
+            <img src="Pizza.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Pizza</h2>
+            <button>Rs:349</button>
+        </div>
+        <div>
+            <img src="Soda.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Soda</h2>
+            <button>Rs:59</button>
+        </div>
+        <div>
+            <img src="Spring roll.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Spring roll</h2>
+            <button>Rs:149</button>
+        </div>
+        <div>
+            <img src="Sandwich.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Sandwich</h2>
+            <button>Rs:99</button>
+        </div>
+        <div>
+            <img src="Doughnut.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Doughnuts</h2>
+            <button>Rs:129</button>
+        </div>
+        <div>
+            <img src="Juice.jpg" alt="land" height="300px" width="400px" class="round">
+            <h2>Juice</h2>
+            <button>Rs:119</button>
+        </div>
     </section>
     <main>
         <footer>
