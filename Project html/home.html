@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas cafe</title>
+    <title>Canvas Cafe | Home</title>
     <style>
         body {
-            font-family: 'Arial, sans-serif';
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #c2c2c2;
+            background-color: #f4f4f4;
         }
         header {
             display: flex;
@@ -19,13 +19,17 @@
             color: #fff;
             padding: 16px 32px;
         }
-        header .logo {
+        .logo {
             font-size: 24px;
+            font-weight: bold;
+            color: #ff9800;
         }
         nav ul {
             list-style: none;
             display: flex;
             gap: 16px;
+            margin: 0;
+            padding: 0;
         }
         nav ul li {
             margin: 0;
@@ -34,59 +38,228 @@
             color: #fff;
             text-decoration: none;
             font-size: 16px;
+            padding: 8px 15px;
+            transition: 0.3s;
         }
+        nav ul li a:hover, .active {
+            background-color: #ff9800;
+            border-radius: 5px;
+        }
+
         .hero {
             background-image: url('background.jpg');
             background-size: cover;
+            background-position: center;
             color: #f2f3f1;
             text-align: center;
-            padding: 64px 32px;
-            height: 315px;
+            padding: 100px 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
         }
         .hero h1 {
-            margin: 0;
             font-size: 48px;
+            margin-bottom: 10px;
         }
-        .content {
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #e68900;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .about-section {
+            background-color: #fff;
             text-align: center;
-            padding: 32px;
+            padding: 40px 20px;
         }
-        .about, .contact, .gallery {
-            background-color: #6d6c6c;
-            padding: 32px;
-            max-width: 800px;
-            margin: 32px auto;
+
+        .gallery-preview {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .gallery {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-section {
+            background-image: url(Template.jpg);
+            background-size: cover;
+            padding: 50px;
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
+        .contact-heading {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .contact-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .contact-card {
+            flex: 1;
+            background: #ff9800;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: scale(1.05);
+        }
+        .contact-form {
+            margin-top: 30px;
+            max-width: 450px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .contact-form h3 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form textarea {
+            resize: none;
+            height: 80px;
+        }
+        .contact-form button {
+            background: #ff9800;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 18px;
+            width: 50%;
+            display: block;
+            margin: 15px auto 0 auto;
+        }
+        .contact-form button:hover {
+            background: #e68900;
+        }
+
         footer {
             text-align: center;
             background-color: #333;
             color: #fff;
             padding: 16px 0;
+            margin-top: 40px;
         }
-        </style>
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">Canvas Cafe</div>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section class="hero">
-        <h1>Welcome to Canvas Cafe</h1>
-        <p>Where art and coffee blend beautifully.</p>
+        <div class="hero-content">
+            <h1>Welcome to Canvas Cafe</h1>
+            <p>Where art and coffee blend beautifully.</p>
+            <a href="menu.html" class="btn">Explore Menu</a>
+        </div>
     </section>
-    <main>
-        <footer>
-            <p>© 2025 Canvas Cafe. All rights reserved.</p>
-        </footer>
-    </main>
+    
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Canvas Cafe is a unique space where creativity meets flavor. Enjoy handcrafted coffee and gourmet meals in an artistic environment.</p>
+        <a href="about.html" class="btn">Learn More</a>
+    </section>
+
+    <section id="gallery" class="gallery-preview">
+        <h2>Our Space</h2>
+        <div class="gallery">
+            <img src="Image2.jpg" alt="Cafe Interior">
+            <img src="Image3.jpg" alt="Coffee Art">
+            <img src="Image1.jpg" alt="Outdoor Seating">
+        </div>
+        <a href="gallery.html" class="btn">View Gallery</a>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="contact-heading">Get in Touch</h2>
+        <p>We'd love to hear from you! Reach out through the options below.</p>
+
+        <div class="contact-grid">
+            <div class="contact-card"><h3>📍 Visit Us</h3><p>123 Coffee Street, City</p></div>
+            <div class="contact-card"><h3>📞 Call Us</h3><p>(123) 456-7890</p></div>
+            <div class="contact-card"><h3>📧 Email Us</h3><p>info@canvascafe.com</p></div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Canvas Cafe. All rights reserved.</p>
+    </footer>
 </body>
 </html>

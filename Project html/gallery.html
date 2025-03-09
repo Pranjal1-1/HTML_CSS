@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Canvas Cafe</title>
+    <title>Canvas Cafe | Gallery</title>
     <style>
-         body {
-            font-family: 'Arial, sans-serif';
+        body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #c2c2c2;
+            background-color: #f4f4f4;
         }
         header {
             display: flex;
@@ -19,13 +19,17 @@
             color: #fff;
             padding: 16px 32px;
         }
-        header .logo {
+        .logo {
             font-size: 24px;
+            font-weight: bold;
+            color: #ff9800;
         }
         nav ul {
             list-style: none;
             display: flex;
             gap: 16px;
+            margin: 0;
+            padding: 0;
         }
         nav ul li {
             margin: 0;
@@ -34,52 +38,75 @@
             color: #fff;
             text-decoration: none;
             font-size: 16px;
+            padding: 8px 15px;
+            transition: 0.3s;
         }
-        body {
-            font-family: 'Arial, sans-serif';
-            margin: 0;
-            padding: 0;
-            background-color: #f3f3f3;
+        nav ul li a:hover, .active {
+            background-color: #ff9800;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #f2f3f1;
+            text-align: center;
+            padding: 100px 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
         .gallery {
-            background-color: #fff;
+           background-image: url(Template.jpg);
+           background-size: cover;
             padding: 32px;
             max-width: 1000px;
             margin: 32px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-image: url(Template.jpg);
-            background-size: cover;
+            border-radius: 10px;
         }
-
         .gallery h2 {
             color: #333;
             text-align: center;
             margin-bottom: 1rem;
         }
-
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
         }
-
         .gallery-item {
             position: relative;
             overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
         .gallery-item img {
             width: 100%;
             height: auto;
             display: block;
             transition: transform 0.3s ease;
+            border-radius: 8px;
         }
-
         .gallery-item:hover img {
             transform: scale(1.1);
         }
-
         .gallery-item .caption {
             position: absolute;
             bottom: 0;
@@ -92,18 +119,20 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
         .gallery-item:hover .caption {
             opacity: 1;
         }
+
         footer {
             text-align: center;
             background-color: #333;
             color: #fff;
             padding: 16px 0;
+            margin-top: 32px;
         }
-        body{background-image:url(Background.jpg);
-            background-size: cover;
+
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -114,36 +143,37 @@
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#gallery" class="active">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="home.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="gallery">
+    <section class="hero">
+        <div class="hero-content">
+        <h1>Our Gallery</h1>
+        <p>Experience the artistic ambiance of Canvas Cafe.</p>
+        </div>
+    </section>
+    <section id="gallery" class="gallery">
         <h2>Gallery</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="Image2.jpg" alt="Gallery Image 1">
-                <div class="caption">"A row of vintage-style pendant lights with exposed bulbs
-                    and wire cages hanging in front of a large window, casting a warm glow inside a cozy café."</div>
+                <div class="caption">"A row of vintage-style pendant lights with exposed bulbs and wire cages hanging in front of a large window, casting a warm glow inside a cozy café."</div>
             </div>
             <div class="gallery-item">
                 <img src="Image1.jpg" alt="Gallery Image 2">
-                <div class="caption">"A cozy coffee shop with a modern interior design, 
-                    featuring a menu board, wooden furniture, and a welcoming atmosphere."</div>
+                <div class="caption">"A cozy coffee shop with a modern interior design, featuring a menu board, wooden furniture, and a welcoming atmosphere."</div>
             </div>
             <div class="gallery-item">
                 <img src="image3.jpg" alt="Gallery Image 3">
-                <div class="caption">"Three cups of latte with intricate latte art on a wooden table,
-                     surrounded by various potted plants."</div>
+                <div class="caption">"Three cups of latte with intricate latte art on a wooden table, surrounded by various potted plants."</div>
             </div>
         </div>
     </section>
-    <main>
     <footer>
         <p>© 2025 Canvas Cafe. All rights reserved.</p>
     </footer>
-</main>
 </body>
 </html>
