@@ -119,7 +119,140 @@ nav ul li a:hover, .active {
 .menu-item:hover {
     transform: scale(1.05);
 }
+.price {
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+}
 
+.cart-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.quantity-box {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.quantity-box button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.quantity-box span {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    min-width: 20px;
+    text-align: center;
+}
+.checkout-section {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-section h2 {
+    margin-bottom: 15px;
+}
+
+#cart-items {
+    text-align: left;
+}
+
+.empty-cart {
+    color: gray;
+}
+
+.total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#checkout-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#checkout-btn:hover {
+    background-color: #218838;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item p {
+    flex: 1;
+    text-align: left; 
+}
+
+.cart-item .item-price {
+    text-align: right; 
+    min-width: 80px;
+    font-weight: bold;
+}
+
+.quantity-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 100px;
+}
+
+.quantity-box span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.remove-item {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.remove-item:hover {
+    color: darkred;
+}
 footer {
     text-align: center;
     background-color: #333;

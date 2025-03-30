@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas Cafe | Menu</title>
     <link rel="stylesheet" href="menu.css">
+    <script defer src="menu.js"></script>
 </head>
 <body>
     <header>
@@ -28,61 +29,96 @@
     <section class="menu-section">
         <h2>Explore Our Menu</h2>
         <div class="menu-grid">
-            <div class="menu-item">
+            <div class="menu-item" data-id="1" data-price="299">
                 <img src="expresso.jpg" alt="Espresso">
                 <h3>Espresso</h3>
                 <p>Strong and bold espresso shot.</p>
-                <button>Rs. 299</button>
+                <p class="price"><b>Rs. 299</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-id="2" data-price="249">
                 <img src="coffee.jpg" alt="Coffee">
                 <h3>Coffee</h3>
                 <p>Rich and creamy freshly brewed coffee.</p>
-                <button>Rs. 249</button>
+                <p class="price"><b>Rs. 249</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-id="3" data-price="99">
                 <img src="burger.jpg" alt="Burger">
                 <h3>Burger</h3>
                 <p>Juicy and delicious gourmet burger.</p>
-                <button>Rs. 99</button>
+                <p class="price"><b>Rs. 99</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-id="4" data-price="349">
                 <img src="pizza.jpg" alt="Pizza">
                 <h3>Pizza</h3>
                 <p>Freshly baked pizza with a variety of toppings.</p>
-                <button>Rs. 349</button>
+                <p class="price"><b>Rs. 349</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-id="5" data-price="59">
                 <img src="soda.jpg" alt="Soda">
                 <h3>Soda</h3>
                 <p>Refreshing carbonated drink.</p>
-                <button>Rs. 59</button>
+                <p class="price"><b>Rs. 59</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-id="6" data-price="149">
                 <img src="spring roll.jpg" alt="Spring Roll">
                 <h3>Spring Roll</h3>
                 <p>Crispy and flavorful vegetable spring rolls.</p>
-                <button>Rs. 149</button>
+                <p class="price"><b>Rs. 149</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-id="7" data-price="99">
                 <img src="sandwich.jpg" alt="Sandwich">
                 <h3>Sandwich</h3>
                 <p>Fresh and healthy gourmet sandwich.</p>
-                <button>Rs. 99</button>
+                <p class="price"><b>Rs. 99</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-id="8" data-price="129">
                 <img src="doughnut.jpg" alt="Doughnuts">
                 <h3>Doughnuts</h3>
                 <p>Sweet and fluffy doughnuts.</p>
-                <button>Rs. 129</button>
+                <p class="price"><b>Rs. 129</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-id="9" data-price="119">
                 <img src="juice.jpg" alt="Juice">
                 <h3>Fresh Juice</h3>
                 <p>Refreshing and healthy fruit juice.</p>
-                <button>Rs. 119</button>
+                <p class="price"><b>Rs. 119</b></p>
+                <div class="cart-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
         </div>
+    </section>
+    <section class="checkout-section">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+        <p class="total-price">Total: Rs. <span id="total">0</span></p>
+        <button id="checkout-btn">Proceed to Checkout</button>
     </section>
     <footer>
         <p>© 2025 Canvas Cafe. All rights reserved.</p>
